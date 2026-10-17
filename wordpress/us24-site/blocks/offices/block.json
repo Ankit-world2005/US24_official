@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "us24/offices",
+	"version": "1.0.0",
+	"title": "US24 Offices",
+	"category": "widgets",
+	"icon": "location",
+	"description": "The US, UK and India office addresses, phones and emails from Settings → US24 Site.",
+	"keywords": [ "address", "office", "contact", "phone" ],
+	"textdomain": "us24-site",
+	"supports": { "html": false, "reusable": true },
+	"attributes": {
+		"layout": { "type": "string", "enum": [ "cards", "list" ], "default": "cards" }
+	},
+	"editorScript": "file:./editor.js",
+	"style": "file:../../assets/blocks.css"
+}

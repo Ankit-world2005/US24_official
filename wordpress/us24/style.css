@@ -1,0 +1,17 @@
+/*
+Theme Name: US24
+Theme URI: https://us24solutions.com/
+Author: US24 Solutions
+Author URI: https://us24solutions.com/
+Description: Deep-navy, blue-and-orange block theme for US24 Solutions, built around the interactive 3D revenue-cycle city hero. Pair it with the "US24 Site" plugin, which imports the site's pages and provides the contact forms and office details.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.0
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: us24
+Tags: block-theme, full-site-editing, dark, one-column, wide-blocks, custom-colors, editor-style
+*/
+
+/* All styles live in assets/css/site.css (loaded on the front end and in the editor). */

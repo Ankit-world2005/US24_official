@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+wordpress/tools/node_modules/
+
+# Distribution & Build Artifacts
+dist/
+wordpress/dist/
+wordpress/dev/shots/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.log

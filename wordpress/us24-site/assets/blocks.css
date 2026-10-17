@@ -1,0 +1,10 @@
+/* Base layout for the US24 Site blocks, so they work with any theme. The US24 theme styles them fully. */
+.us24-form { display: grid; gap: 14px; }
+.us24-form .us24-form__row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.us24-form label { display: grid; gap: 6px; }
+.us24-form input:not([type="checkbox"]):not([type="file"]), .us24-form textarea, .us24-form select { width: 100%; box-sizing: border-box; }
+.us24-form .us24-hp { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+.us24-form__notice { padding: 10px 12px; border-radius: 8px; }
+.us24-form__notice.is-success { background: #e6f7f1; color: #0b5d43; }
+.us24-form__notice.is-error { background: #fdecec; color: #8a1c1c; }
+.us24-offices { display: grid; gap: 12px; }

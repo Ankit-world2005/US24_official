@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "us24/hero-3d",
+	"version": "1.0.0",
+	"title": "US24 3D Hero",
+	"category": "design",
+	"icon": "admin-site-alt3",
+	"description": "Interactive 3D city at dusk: clinics send claims to the US24 headquarters, each floor is one stage of the revenue cycle, payers pay back, and a hologram globe marks the three offices.",
+	"keywords": [ "hero", "3d", "city", "revenue cycle", "rcm" ],
+	"textdomain": "us24",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"align": [ "full" ]
+	},
+	"attributes": {
+		"align": { "type": "string", "default": "full" },
+		"showCopy": { "type": "boolean", "default": true },
+		"autoTour": { "type": "boolean", "default": true },
+		"tourSeconds": { "type": "number", "default": 8 },
+		"headline": { "type": "string", "default": "Collect more.<br>Chase <em>less.</em>" },
+		"text": { "type": "string", "default": "End-to-end medical billing, coding and credentialing. One US24 team runs your whole revenue cycle, so your staff can stay with patients." },
+		"primaryLabel": { "type": "string", "default": "Start a free trial" },
+		"primaryUrl": { "type": "string", "default": "/contact/" },
+		"secondaryLabel": { "type": "string", "default": "Explore services" },
+		"secondaryUrl": { "type": "string", "default": "/our-services/" }
+	},
+	"example": { "attributes": { "autoTour": false } },
+	"editorScript": "file:./editor.js",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

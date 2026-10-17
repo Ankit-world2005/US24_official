@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "us24/contact-form",
+	"version": "1.0.0",
+	"title": "US24 Contact form",
+	"category": "widgets",
+	"icon": "email-alt",
+	"description": "Enquiry or job-application form. Messages are emailed to the addresses in Settings → US24 Site.",
+	"keywords": [ "contact", "form", "quote", "career", "apply" ],
+	"textdomain": "us24-site",
+	"supports": { "html": false, "reusable": true },
+	"attributes": {
+		"variant": { "type": "string", "enum": [ "contact", "career" ], "default": "contact" },
+		"submitLabel": { "type": "string", "default": "" }
+	},
+	"editorScript": "file:./editor.js",
+	"style": "file:../../assets/blocks.css"
+}

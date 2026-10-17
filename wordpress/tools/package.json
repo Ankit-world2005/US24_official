@@ -1,0 +1,19 @@
+{
+  "name": "us24-wordpress-tools",
+  "private": true,
+  "type": "module",
+  "description": "Crawl us24solutions.com, convert it to WordPress blocks, package and verify the US24 theme and plugin.",
+  "scripts": {
+    "build": "node build-content.mjs data/content.json ../us24-site/content && node port-hero.cjs \"../../US24 3D Hero.html\" ../us24/blocks/hero-3d/view.js && node package.mjs",
+    "package": "node package.mjs",
+    "preview": "wp-playground-cli server --php 8.1 --login --mount-dir ../us24 /wordpress/wp-content/themes/us24 --mount-dir ../us24-site /wordpress/wp-content/plugins/us24-site --blueprint ../dev/blueprint.json",
+    "verify": "node verify.mjs http://127.0.0.1:9400 ../us24-site/content/pages.json ../dev/shots"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0",
+    "puppeteer-core": "23.11.1"
+  },
+  "devDependencies": {
+    "@wp-playground/cli": "3.1.56"
+  }
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "US24 Solutions on WordPress (local preview)",
+		"description": "Activates the US24 theme and the US24 Site plugin, then imports every page. Use with the mounts in dev/README.md.",
+		"author": "US24 Solutions"
+	},
+	"landingPage": "/",
+	"preferredVersions": { "php": "8.1", "wp": "latest" },
+	"steps": [
+		{ "step": "setSiteOptions", "options": { "blogname": "My WordPress Website", "timezone_string": "Asia/Kolkata" } },
+		{ "step": "activateTheme", "themeFolderName": "us24" },
+		{ "step": "activatePlugin", "pluginPath": "us24-site/us24-site.php" },
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $r = us24_site_import(); file_put_contents('/wordpress/wp-content/us24-import-report.json', wp_json_encode($r, JSON_PRETTY_PRINT)); echo wp_json_encode(array_count_values(wp_list_pluck($r['items'], 'action')));"
+		}
+	]
+}

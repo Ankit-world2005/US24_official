@@ -1,0 +1,43 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"us24-site-header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"us24-main","layout":{"type":"default"}} -->
+<main class="wp-block-group us24-main"><!-- wp:group {"tagName":"section","align":"full","className":"us24-hero-band","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull us24-hero-band"><!-- wp:group {"align":"wide","className":"us24-hero-band__inner","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide us24-hero-band__inner"><!-- wp:paragraph {"className":"is-style-us24-eyebrow"} -->
+<p class="is-style-us24-eyebrow">Archive</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:query-title {"type":"archive","level":1} /--></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"us24-section","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull us24-section"><!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"align":"wide","layout":{"type":"default"}} -->
+<div class="wp-block-query alignwide"><!-- wp:post-template {"className":"us24-grid","layout":{"type":"grid","columnCount":3,"minimumColumnWidth":"16rem"}} -->
+<!-- wp:group {"className":"is-style-us24-card has-link","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group is-style-us24-card has-link"><!-- wp:post-date {"className":"is-style-us24-eyebrow"} /-->
+
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+
+<!-- wp:post-excerpt {"excerptLength":28} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>Nothing has been published here yet.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></section>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"us24-site-footer"} /-->
