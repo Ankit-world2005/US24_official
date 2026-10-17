@@ -13,23 +13,22 @@
 			"defaultGradients": false,
 			"defaultDuotone": false,
 			"palette": [
-				{ "slug": "bg", "name": "Cyan ice light", "color": "#EBF7FA" },
-				{ "slug": "surface", "name": "Surface soft cyan", "color": "#DDF2F7" },
-				{ "slug": "surface-2", "name": "Surface white", "color": "#FFFFFF" },
-				{ "slug": "line", "name": "Line cyan crystal", "color": "#AEE2ED" },
-				{ "slug": "fg", "name": "Deep oceanic navy", "color": "#082B3E" },
-				{ "slug": "muted", "name": "Muted oceanic slate", "color": "#385A6C" },
+				{ "slug": "bg", "name": "Deep ink", "color": "#07080A" },
+				{ "slug": "surface", "name": "Dark glass surface", "color": "#0D1117" },
+				{ "slug": "surface-2", "name": "Dark surface elevated", "color": "#141A24" },
+				{ "slug": "line", "name": "Hairline border", "color": "rgba(255, 255, 255, 0.08)" },
+				{ "slug": "fg", "name": "Bone white text", "color": "#EDEDEF" },
+				{ "slug": "muted", "name": "Mist text", "color": "#9496A1" },
+				{ "slug": "dim", "name": "Dim text", "color": "#5B5D68" },
 				{ "slug": "accent", "name": "US24 orange", "color": "#F68535" },
 				{ "slug": "accent-ink", "name": "Text on orange", "color": "#FFFFFF" },
+				{ "slug": "tide", "name": "Electric cyan tide", "color": "#46B7FF" },
+				{ "slug": "foam", "name": "Mint foam glow", "color": "#8BF3E6" },
 				{ "slug": "cyan", "name": "Silk cyan", "color": "#339CB9" },
 				{ "slug": "cyan-light", "name": "Silk cyan highlight", "color": "#67BDD1" },
 				{ "slug": "cyan-dark", "name": "Silk cyan deep", "color": "#1781A2" },
 				{ "slug": "blue", "name": "Electric cyan blue", "color": "#2897B4" },
-				{ "slug": "royal", "name": "Ocean navy", "color": "#0E6A8A" },
-				{ "slug": "brand-navy", "name": "US24 navy", "color": "#253A8D" },
-				{ "slug": "orange-light", "name": "Light orange", "color": "#FF9A4D" },
-				{ "slug": "gold", "name": "Gold", "color": "#F59E0B" },
-				{ "slug": "sky", "name": "Sky cyan", "color": "#44AFCB" },
+				{ "slug": "orange-light", "name": "Light orange", "color": "#FFA05C" },
 				{ "slug": "white", "name": "White", "color": "#FFFFFF" }
 			]
 		},
@@ -113,18 +112,20 @@
 		"shadow": {
 			"defaultPresets": false,
 			"presets": [
-				{ "slug": "glow", "name": "Orange glow", "shadow": "0 10px 28px -6px rgba(246, 133, 53, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.75)" },
-				{ "slug": "glass", "name": "Glass glossy", "shadow": "0 16px 36px -10px rgba(8, 43, 62, 0.08), 0 4px 12px -2px rgba(8, 43, 62, 0.04), inset 0 1px 2px rgba(255, 255, 255, 0.95)" },
-				{ "slug": "deep", "name": "Deep", "shadow": "0 24px 48px -12px rgba(8, 43, 62, 0.14)" }
+				{ "slug": "glow", "name": "Orange glow", "shadow": "0 10px 28px -6px rgba(246, 133, 53, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.35)" },
+				{ "slug": "tide", "name": "Tide cyan glow", "shadow": "0 18px 60px -18px rgba(70, 183, 255, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.12)" },
+				{ "slug": "glass", "name": "Dark glass", "shadow": "0 16px 36px -10px rgba(0, 0, 0, 0.65), 0 4px 12px -2px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.08)" },
+				{ "slug": "deep", "name": "Deep shadow", "shadow": "0 24px 56px -12px rgba(0, 0, 0, 0.85)" }
 			]
 		},
 		"custom": {
-			"glass": "rgba(255, 255, 255, 0.88)",
-			"glass-card": "linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(235, 247, 250, 0.88) 100%)",
-			"line": "rgba(51, 156, 185, 0.45)",
-			"line-white": "rgba(255, 255, 255, 0.9)",
-			"gradient-silk": "linear-gradient(135deg, #1781A2 0%, #2897B4 35%, #339CB9 60%, #44AFCB 85%, #67BDD1 100%)",
-			"radius": { "sm": "10px", "md": "14px", "lg": "20px", "xl": "28px" },
+			"glass": "rgba(13, 17, 23, 0.72)",
+			"glass-card": "linear-gradient(145deg, rgba(18, 23, 33, 0.82) 0%, rgba(9, 12, 17, 0.9) 100%)",
+			"line": "rgba(255, 255, 255, 0.08)",
+			"line-strong": "rgba(70, 183, 255, 0.35)",
+			"line-white": "rgba(255, 255, 255, 0.15)",
+			"gradient-tide": "linear-gradient(135deg, #1781A2 0%, #2897B4 35%, #46B7FF 70%, #8BF3E6 100%)",
+			"radius": { "sm": "10px", "md": "14px", "lg": "20px", "xl": "28px", "full": "999px" },
 			"header-height": "72px"
 		},
 		"blocks": {
@@ -150,8 +151,8 @@
 		},
 		"elements": {
 			"link": {
-				"color": { "text": "var(--wp--preset--color--blue)" },
-				"typography": { "textDecoration": "underline" },
+				"color": { "text": "var(--wp--preset--color--tide)" },
+				"typography": { "textDecoration": "none" },
 				":hover": { "color": { "text": "var(--wp--preset--color--accent)" } }
 			},
 			"heading": {
@@ -159,11 +160,11 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--display)",
 					"fontWeight": "800",
-					"lineHeight": "1.08",
+					"lineHeight": "1.05",
 					"letterSpacing": "-0.03em"
 				}
 			},
-			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--display)", "lineHeight": "0.98", "letterSpacing": "-0.045em" } },
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--display)", "lineHeight": "0.95", "letterSpacing": "-0.04em" } },
 			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--xx-large)" } },
 			"h3": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)", "letterSpacing": "-0.02em" } },
 			"h4": { "typography": { "fontSize": "var(--wp--preset--font-size--large)", "letterSpacing": "-0.01em" } },
@@ -174,11 +175,11 @@
 					"background": "var(--wp--preset--color--accent)",
 					"text": "#FFFFFF"
 				},
-				"border": { "radius": "14px", "width": "1px", "color": "rgba(255, 255, 255, 0.35)" },
-				"spacing": { "padding": { "top": "0.85rem", "bottom": "0.85rem", "left": "1.4rem", "right": "1.4rem" } },
+				"border": { "radius": "999px", "width": "1px", "color": "rgba(255, 255, 255, 0.25)" },
+				"spacing": { "padding": { "top": "0.8rem", "bottom": "0.8rem", "left": "1.6rem", "right": "1.6rem" } },
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--body)",
-					"fontSize": "1rem",
+					"fontSize": "0.9375rem",
 					"fontWeight": "700",
 					"lineHeight": "1.2",
 					"textDecoration": "none"
