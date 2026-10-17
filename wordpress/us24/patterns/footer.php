@@ -81,7 +81,7 @@ $social_labels = array(
 <!-- wp:html -->
 <div class="us24-footer__grid alignwide">
 	<div class="us24-footer__brand">
-		<a class="us24-logo" href="<?php echo $u( '' ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/brand/us24-logo-light.svg' ) ); ?>" alt="US24 Solutions — Innovative Technology Driven" width="200" height="31" loading="lazy"></a>
+		<a class="us24-logo" href="<?php echo $u( '' ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/brand/us24-logo.svg' ) ); ?>" alt="US24 Solutions — Innovative Technology Driven" width="200" height="31" loading="lazy"></a>
 		<p>RCM, IT services and consulting for healthcare providers and growing businesses.</p>
 		<ul class="us24-footer__badges"><li>ISO 9001:2015</li><li>HIPAA compliant</li></ul>
 	</div>

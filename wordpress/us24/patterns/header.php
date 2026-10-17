@@ -61,7 +61,7 @@ $link     = static function ( $slug, $label, $desc = '' ) use ( $u ) {
 <!-- wp:group {"className":"us24-header","layout":{"type":"constrained"}} -->
 <div class="wp-block-group us24-header"><!-- wp:group {"align":"wide","className":"us24-header__bar","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group alignwide us24-header__bar"><!-- wp:html -->
-<a class="us24-logo" href="<?php echo $u( '' ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/brand/us24-logo-light.svg' ) ); ?>" alt="US24 Solutions — Innovative Technology Driven" width="176" height="27"></a>
+<a class="us24-logo" href="<?php echo $u( '' ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/brand/us24-logo.svg' ) ); ?>" alt="US24 Solutions — Innovative Technology Driven" width="176" height="27"></a>
 <!-- /wp:html -->
 
 <!-- wp:navigation {"overlayBackgroundColor":"bg","overlayTextColor":"fg","className":"us24-nav","layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"}} -->

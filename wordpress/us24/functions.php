@@ -89,7 +89,7 @@ add_action( 'init', 'us24_register_pattern_category' );
  * Browser colour and a fallback favicon when no Site Icon is set.
  */
 function us24_head() {
-	echo '<meta name="theme-color" content="#070E26">' . "\n";
+	echo '<meta name="theme-color" content="#F0F6FF">' . "\n";
 	if ( ! has_site_icon() ) {
 		echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( get_theme_file_uri( 'assets/brand/favicon.svg' ) ) . '">' . "\n";
 	}
