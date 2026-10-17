@@ -40,4 +40,14 @@ This repository implements a three-tier environment branching model:
 
 ## Getting Started
 
-Refer to [`Docs/WORDPRESS.md`](WORDPRESS.md) for full instructions on local development with WordPress Playground, rebuilding assets, and deploying to staging/production hosts.
+### Local Development Server
+Run the local WordPress Playground environment directly from the project root:
+```bash
+npm run dev
+```
+
+### Build & Packaging Commands
+- `npm run package` — Package theme (`us24-theme.zip`) and plugin (`us24-site.zip`) for distribution/upload.
+- `npm run verify` — Run automated validation suite across all pages and blocks.
+
+For complete technical documentation, see [`Docs/WORDPRESS.md`](WORDPRESS.md).

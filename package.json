@@ -1,0 +1,14 @@
+{
+  "name": "us24-official",
+  "version": "1.0.0",
+  "private": true,
+  "description": "US24 Solutions official website and digital experience platform",
+  "scripts": {
+    "dev": "npm --prefix wordpress/tools run preview",
+    "start": "npm --prefix wordpress/tools run preview",
+    "preview": "npm --prefix wordpress/tools run preview",
+    "build": "npm --prefix wordpress/tools run package",
+    "package": "npm --prefix wordpress/tools run package",
+    "verify": "npm --prefix wordpress/tools run verify"
+  }
+}
