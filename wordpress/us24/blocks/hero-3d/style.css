@@ -1,22 +1,22 @@
 /* US24 3D hero. Full-bleed city at dusk; headline over a left-side shade; hotspot labels in the scene;
    one glass info card and a tour bar along the bottom. Everything is scoped to .us24-hero. */
 .us24-hero {
-	--h-bg: #070E26;
-	--h-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(13, 25, 58, 0.75) 100%);
-	--h-line: rgba(140, 175, 255, 0.25);
-	--h-line-white: rgba(255, 255, 255, 0.35);
+	--h-bg: #051926;
+	--h-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(8, 43, 62, 0.75) 100%);
+	--h-line: rgba(103, 189, 209, 0.3);
+	--h-line-white: rgba(255, 255, 255, 0.4);
 	--h-fg: #FFFFFF;
-	--h-muted: #A9B6D8;
+	--h-muted: #A0C4D3;
 	--h-accent: #F68535;
-	--h-blue: #60A5FA;
-	--h-ice-blue: #BAE6FD;
+	--h-blue: #339CB9;
+	--h-ice-blue: #67BDD1;
 	--h-accent-ink: #FFFFFF;
 	position: relative;
 	height: calc(100svh - var(--wp--custom--header-height, 72px) - var(--wp-admin--admin-bar--height, 0px));
 	min-height: 560px;
 	overflow: hidden;
 	isolation: isolate;
-	background: radial-gradient(80% 60% at 70% 40%, #1A2C66 0%, var(--h-bg) 70%);
+	background: radial-gradient(80% 60% at 70% 40%, #0E4861 0%, var(--h-bg) 70%);
 	color: var(--h-fg);
 	font-family: var(--wp--preset--font-family--body, 'Instrument Sans', system-ui, sans-serif);
 	font-size: 15px;
@@ -30,10 +30,10 @@
 .us24-hero__shade {
 	position: absolute; inset: 0; pointer-events: none; z-index: 1;
 	background:
-		linear-gradient(90deg, rgba(7, 14, 38,.92) 0%, rgba(7, 14, 38,.62) 30%, rgba(7, 14, 38,0) 58%),
-		linear-gradient(0deg, rgba(7, 14, 38,.85) 0%, rgba(7, 14, 38,0) 26%);
+		linear-gradient(90deg, rgba(5, 25, 38, .94) 0%, rgba(5, 25, 38, .65) 30%, rgba(5, 25, 38, 0) 58%),
+		linear-gradient(0deg, rgba(5, 25, 38, .88) 0%, rgba(5, 25, 38, 0) 26%);
 }
-.us24-hero.nocopy .us24-hero__shade { background: linear-gradient(0deg, rgba(7, 14, 38,.8) 0%, rgba(7, 14, 38,0) 24%), radial-gradient(120% 90% at 50% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,.45) 100%); }
+.us24-hero.nocopy .us24-hero__shade { background: linear-gradient(0deg, rgba(5, 25, 38, .8) 0%, rgba(5, 25, 38, 0) 24%), radial-gradient(120% 90% at 50% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,.45) 100%); }
 
 .us24-hero__copy {
 	position: absolute; z-index: 3;
@@ -50,8 +50,8 @@
 	letter-spacing: .02em;
 	padding: 6px 13px;
 	border-radius: 999px;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(147, 197, 253, 0.18) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(103, 189, 209, 0.22) 100%);
 	color: #FFFFFF;
 	-webkit-backdrop-filter: blur(12px);
 	backdrop-filter: blur(12px);
@@ -82,7 +82,7 @@
 .us24-hero .us24-hero__btn.is-ghost {
 	color: #FFFFFF;
 	border: 1px solid rgba(255, 255, 255, 0.55);
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(147, 197, 253, 0.2) 100%);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(103, 189, 209, 0.22) 100%);
 	-webkit-backdrop-filter: blur(14px) saturate(160%);
 	backdrop-filter: blur(14px) saturate(160%);
 	box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.7);
@@ -110,7 +110,7 @@
 	padding: 6px 12px 6px 7px;
 	border-radius: 999px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(10, 25, 56, 0.75) 100%);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(8, 43, 62, 0.8) 100%);
 	-webkit-backdrop-filter: blur(14px);
 	backdrop-filter: blur(14px);
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 1px #FFFFFF;
@@ -125,7 +125,7 @@
 }
 .us24-hot:hover, .us24-hot.on {
 	border-color: #FFA866;
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(20, 38, 86, 0.94) 100%);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(14, 72, 97, 0.94) 100%);
 	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(246, 133, 53, 0.4), inset 0 1px 2px #FFFFFF;
 	transform: translateY(-2px);
 }
@@ -139,13 +139,13 @@
 	right: max(24px, env(safe-area-inset-right, 0px));
 	bottom: 92px;
 	width: min(340px, calc(100% - 48px));
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(238, 245, 255, 0.92) 100%);
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(235, 247, 250, 0.92) 100%);
 	border: 1px solid rgba(255, 255, 255, 0.9);
 	border-radius: 22px;
 	padding: 20px 22px;
 	-webkit-backdrop-filter: blur(20px) saturate(180%);
 	backdrop-filter: blur(20px) saturate(180%);
-	box-shadow: 0 24px 50px -10px rgba(10, 25, 56, 0.35), 0 0 25px -5px rgba(37, 99, 235, 0.2), inset 0 1px 2px #FFFFFF;
+	box-shadow: 0 24px 50px -10px rgba(8, 43, 62, 0.35), 0 0 25px -5px rgba(51, 156, 185, 0.25), inset 0 1px 2px #FFFFFF;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -154,9 +154,9 @@
 .us24-hero__card:empty { display: none; }
 .us24-hero__card.swap { opacity: 0; transform: translateY(8px); }
 .us24-hero__card .eyebrow { font-family: var(--wp--preset--font-family--mono, 'JetBrains Mono', monospace); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--c, var(--h-accent)); font-weight: 700; }
-.us24-hero .us24-hero__card h2 { margin: 0; color: #0A1938; font-family: var(--wp--preset--font-family--display, 'Bricolage Grotesque', sans-serif); font-weight: 800; font-size: 22px; letter-spacing: -.02em; line-height: 1.1; }
-.us24-hero .us24-hero__card p { margin: 0; color: #334155; line-height: 1.5; font-size: 14px; }
-.us24-hero__card ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #1E293B; }
+.us24-hero .us24-hero__card h2 { margin: 0; color: #082B3E; font-family: var(--wp--preset--font-family--display, 'Bricolage Grotesque', sans-serif); font-weight: 800; font-size: 22px; letter-spacing: -.02em; line-height: 1.1; }
+.us24-hero .us24-hero__card p { margin: 0; color: #2D4857; line-height: 1.5; font-size: 14px; }
+.us24-hero__card ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #082B3E; }
 .us24-hero__card li { display: flex; gap: 9px; align-items: baseline; }
 .us24-hero__card li::before { content: ""; flex: 0 0 6px; height: 6px; border-radius: 2px; background: var(--c, var(--h-accent)); transform: translateY(-2px); }
 .us24-hero .us24-hero__card .more { align-self: flex-start; margin-top: 2px; font-size: 13px; font-weight: 700; color: var(--c, var(--h-accent)); text-decoration: none; }
@@ -173,18 +173,18 @@
 	gap: 6px;
 	padding: 5px;
 	border-radius: 999px;
-	border: 1px solid rgba(255, 255, 255, 0.85);
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 246, 255, 0.88) 100%);
+	border: 1px solid rgba(174, 226, 237, 0.7);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 247, 250, 0.92) 100%);
 	-webkit-backdrop-filter: blur(16px);
 	backdrop-filter: blur(16px);
-	box-shadow: 0 10px 25px rgba(10, 25, 56, 0.25), inset 0 1px 1px #FFFFFF;
+	box-shadow: 0 10px 25px rgba(8, 43, 62, 0.15), inset 0 1px 1px #FFFFFF;
 }
 .us24-hero__tour:empty { display: none; }
-.us24-hero__tour button { position: relative; overflow: hidden; font: inherit; font-size: 12px; font-weight: 700; color: #475569; background: transparent; border: 0; border-radius: 999px; padding: 8px 12px; min-height: 36px; cursor: pointer; transition: color .2s, background .2s; }
-.us24-hero__tour button:hover { color: #0A1938; }
+.us24-hero__tour button { position: relative; overflow: hidden; font: inherit; font-size: 12px; font-weight: 700; color: #385A6C; background: transparent; border: 0; border-radius: 999px; padding: 8px 12px; min-height: 36px; cursor: pointer; transition: color .2s, background .2s; }
+.us24-hero__tour button:hover { color: #082B3E; }
 .us24-hero__tour button[aria-pressed="true"] { color: #F68535; background: rgba(246, 133, 53, .16); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8); }
 .us24-hero__tour button .bar { position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; border-radius: 2px; background: var(--h-accent); transform-origin: left; transform: scaleX(0); }
-.us24-hero__tour .icon { width: 36px; padding: 0; display: grid; place-items: center; color: #0A1938; }
+.us24-hero__tour .icon { width: 36px; padding: 0; display: grid; place-items: center; color: #082B3E; }
 .us24-hero button:focus-visible, .us24-hero a:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
 
 /* Sits under the copy (z 3) so the server-rendered headline stays readable while WebGL starts. */

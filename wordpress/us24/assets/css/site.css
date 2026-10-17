@@ -1,36 +1,39 @@
 /* US24 theme: everything outside the 3D hero block. Loaded on the front end and inside the editor.
-   Design tokens come from theme.json (presets) and the US24 brand: light blue crystal glass, vibrant orange accent, and deep navy text. */
+   Design tokens inspired by user reference: flowing cyan-teal silk waves, glossy white glass panels, and US24 vivid orange accents. */
 
 :root {
-	/* Frosted Glass Layers (Light Blue & Crisp White) */
-	--us24-glass: rgba(255, 255, 255, 0.85);
-	--us24-glass-card: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(238, 245, 255, 0.85) 100%);
-	--us24-glass-hover: linear-gradient(135deg, #FFFFFF 0%, rgba(228, 240, 255, 0.94) 100%);
-	--us24-glass-strong: rgba(255, 255, 255, 0.96);
-	--us24-glass-pill: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(219, 234, 254, 0.75) 100%);
+	/* Frosted Glass Layers (Cyan-Teal Silk & Crisp White) */
+	--us24-glass: rgba(255, 255, 255, 0.88);
+	--us24-glass-card: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(235, 247, 250, 0.88) 100%);
+	--us24-glass-hover: linear-gradient(135deg, #FFFFFF 0%, rgba(220, 244, 250, 0.94) 100%);
+	--us24-glass-strong: rgba(255, 255, 255, 0.98);
+	--us24-glass-pill: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(206, 239, 247, 0.82) 100%);
 
 	/* Glossy Borders & Highlights */
-	--us24-line: rgba(147, 197, 253, 0.55);
-	--us24-line-soft: rgba(147, 197, 253, 0.32);
-	--us24-line-white: rgba(255, 255, 255, 0.9);
-	--us24-line-blue: rgba(59, 130, 246, 0.45);
+	--us24-line: rgba(51, 156, 185, 0.42);
+	--us24-line-soft: rgba(51, 156, 185, 0.22);
+	--us24-line-white: rgba(255, 255, 255, 0.92);
+	--us24-line-cyan: rgba(68, 175, 203, 0.6);
 
-	/* Theme Palette: Light Blue, Orange, Navy & White */
+	/* Theme Palette: Silk Cyan-Teal Gradient, US24 Orange & Deep Oceanic Navy */
 	--us24-c: var(--wp--preset--color--accent, #F68535);
 	--us24-orange: #F68535;
 	--us24-orange-light: #FF9A4D;
 	--us24-orange-glow: rgba(246, 133, 53, 0.45);
-	--us24-blue: #2563EB;
-	--us24-ice-blue: #DBEAFE;
-	--us24-blue-glow: rgba(37, 99, 235, 0.22);
+	--us24-cyan: #339CB9;
+	--us24-cyan-light: #67BDD1;
+	--us24-cyan-deep: #1781A2;
+	--us24-ice-cyan: #C2EDF7;
+	--us24-blue: #2897B4;
+	--us24-cyan-glow: rgba(51, 156, 185, 0.25);
 	--us24-white: #FFFFFF;
-	--us24-label: #1D4ED8;
+	--us24-label: #1781A2;
 
-	/* Gloss Bevels & Depth Shadows (Soft ambient with white specular glints) */
-	--us24-glass-shadow: 0 14px 34px -8px rgba(15, 35, 75, 0.08), 0 2px 6px -1px rgba(15, 35, 75, 0.04), inset 0 1px 2px 0 #FFFFFF;
-	--us24-glass-shadow-hover: 0 20px 45px -10px rgba(15, 35, 75, 0.14), 0 0 24px -4px rgba(37, 99, 235, 0.18), inset 0 1px 2px 0 #FFFFFF;
+	/* Gloss Bevels & Depth Shadows */
+	--us24-glass-shadow: 0 14px 34px -8px rgba(8, 43, 62, 0.08), 0 2px 6px -1px rgba(8, 43, 62, 0.04), inset 0 1px 2px 0 #FFFFFF;
+	--us24-glass-shadow-hover: 0 20px 45px -10px rgba(8, 43, 62, 0.14), 0 0 24px -4px rgba(51, 156, 185, 0.25), inset 0 1px 2px 0 #FFFFFF;
 	--us24-btn-orange-shadow: 0 10px 24px -4px rgba(246, 133, 53, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
-	--us24-btn-blue-shadow: 0 10px 24px -4px rgba(37, 99, 235, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
+	--us24-btn-cyan-shadow: 0 10px 24px -4px rgba(51, 156, 185, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
 
 	--us24-header-h: var(--wp--custom--header-height, 72px);
 	--us24-radius: 20px;
@@ -40,10 +43,10 @@
 /* Service-line accents. Set on a section or card; children pick up --us24-c. */
 .line-rcm { --us24-c: #F68535; }
 .line-cyber { --us24-c: #E07B00; }
-.line-salesforce { --us24-c: #2563EB; }
-.line-tech { --us24-c: #0284C7; }
+.line-salesforce { --us24-c: #2897B4; }
+.line-tech { --us24-c: #339CB9; }
 .line-business { --us24-c: #F68535; }
-.line-marketing { --us24-c: #4F46E5; }
+.line-marketing { --us24-c: #0E6A8A; }
 .line-company { --us24-c: #F68535; }
 
 body {
@@ -51,7 +54,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 }
-::selection { background: rgba(246, 133, 53, .32); color: #0A1938; }
+::selection { background: rgba(246, 133, 53, .32); color: #082B3E; }
 :where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--wp--preset--color--accent); outline-offset: 2px; }
 a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
 img { height: auto; }
@@ -68,8 +71,8 @@ img { height: auto; }
 	position: sticky;
 	top: var(--wp-admin--admin-bar--height, 0px);
 	z-index: 100;
-	border-bottom: 1px solid rgba(147, 197, 253, 0.45);
-	box-shadow: 0 4px 24px -4px rgba(15, 35, 75, 0.07);
+	border-bottom: 1px solid rgba(51, 156, 185, 0.35);
+	box-shadow: 0 4px 24px -4px rgba(8, 43, 62, 0.07);
 }
 /* The blur lives on a pseudo-element: backdrop-filter on the header itself would become the containing
    block of the full-screen mobile menu (position: fixed) and clip it to the header's 72px. */
@@ -78,10 +81,10 @@ img { height: auto; }
 	position: absolute;
 	inset: 0;
 	z-index: -1;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 246, 255, 0.94) 100%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(235, 247, 250, 0.96) 100%);
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
-	box-shadow: inset 0 -1px 0 rgba(147, 197, 253, 0.35), inset 0 1px 0 #FFFFFF;
+	box-shadow: inset 0 -1px 0 rgba(51, 156, 185, 0.25), inset 0 1px 0 #FFFFFF;
 }
 .us24-header { padding-inline: max(20px, env(safe-area-inset-left, 0px)); }
 .us24-header__bar { min-height: var(--us24-header-h); gap: 20px; position: relative; }
@@ -114,27 +117,27 @@ img { height: auto; }
 .us24-nav .wp-block-navigation__container { gap: 4px; }
 .us24-nav .wp-block-navigation-item__content { padding: 10px 14px; border-radius: 10px; transition: background .2s, border-color .2s; border: 1px solid transparent; }
 .us24-nav .wp-block-navigation-item__content:hover {
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(219, 234, 254, 0.5));
-	border-color: rgba(147, 197, 253, 0.5);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(194, 237, 247, 0.6));
+	border-color: rgba(68, 175, 203, 0.5);
 	box-shadow: inset 0 1px 0 #FFFFFF;
 }
 
 /* Desktop dropdowns: glass panels. */
 @media (min-width: 1100px) {
 	.us24-nav .wp-block-navigation__submenu-container {
-		background: linear-gradient(145deg, rgba(255, 255, 255, 0.97) 0%, rgba(240, 246, 255, 0.95) 100%) !important;
-		border: 1px solid rgba(147, 197, 253, 0.5) !important;
+		background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(235, 247, 250, 0.96) 100%) !important;
+		border: 1px solid rgba(68, 175, 203, 0.5) !important;
 		border-radius: 18px;
 		padding: 10px;
-		box-shadow: 0 25px 60px -15px rgba(15, 35, 75, 0.16), 0 0 25px -5px rgba(37, 99, 235, 0.1), inset 0 1px 2px #FFFFFF !important;
+		box-shadow: 0 25px 60px -15px rgba(8, 43, 62, 0.15), 0 0 25px -5px rgba(51, 156, 185, 0.18), inset 0 1px 2px #FFFFFF !important;
 		-webkit-backdrop-filter: blur(24px) saturate(200%);
 		backdrop-filter: blur(24px) saturate(200%);
 		min-width: 260px !important;
 	}
 	.us24-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content { padding: 9px 12px; font-weight: 600; color: var(--wp--preset--color--fg); border-radius: 10px; }
 	.us24-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
-		background: linear-gradient(135deg, #FFFFFF, rgba(219, 234, 254, 0.6));
-		border-color: rgba(147, 197, 253, 0.6);
+		background: linear-gradient(135deg, #FFFFFF, rgba(194, 237, 247, 0.65));
+		border-color: rgba(68, 175, 203, 0.6);
 		color: var(--us24-orange);
 	}
 	.us24-nav .us24-drop > .wp-block-navigation__submenu-container { left: -8px; }
@@ -195,9 +198,9 @@ img { height: auto; }
 	isolation: isolate;
 	padding-block: clamp(56px, 8vw, 120px) clamp(48px, 6vw, 96px);
 	background:
-		radial-gradient(60% 90% at 85% 10%, color-mix(in srgb, var(--us24-c) 14%, transparent), transparent 70%),
-		radial-gradient(50% 70% at 10% 100%, rgba(37, 99, 235, 0.12), transparent 70%),
-		var(--wp--preset--color--bg);
+		radial-gradient(75% 100% at 85% 15%, rgba(68, 175, 203, 0.35) 0%, transparent 65%),
+		radial-gradient(60% 80% at 10% 90%, rgba(246, 133, 53, 0.18) 0%, transparent 55%),
+		linear-gradient(180deg, #EBF7FA 0%, #D8F0F6 100%);
 	border-bottom: 1px solid var(--us24-line);
 }
 /* Blueprint grid that fades out toward the text. */
@@ -225,12 +228,12 @@ img { height: auto; }
 	transform: translateY(-50%);
 	border-radius: 50%;
 	background:
-		radial-gradient(circle at 50% 50%, transparent 0 34%, color-mix(in srgb, var(--us24-c) 35%, transparent) 34.2% 34.6%, transparent 34.8%),
-		radial-gradient(circle at 50% 50%, transparent 0 52%, color-mix(in srgb, var(--us24-c) 24%, transparent) 52.2% 52.5%, transparent 52.7%),
-		radial-gradient(circle at 50% 50%, transparent 0 70%, color-mix(in srgb, var(--us24-c) 16%, transparent) 70.2% 70.4%, transparent 70.6%),
-		radial-gradient(circle at 78% 22%, var(--us24-c) 0 1.1%, transparent 1.4%),
-		radial-gradient(circle at 16% 64%, var(--us24-c) 0 .8%, transparent 1.1%),
-		radial-gradient(circle at 60% 98%, var(--wp--preset--color--blue) 0 .9%, transparent 1.2%);
+		radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(51, 156, 185, 0.45) 34.2% 34.6%, transparent 34.8%),
+		radial-gradient(circle at 50% 50%, transparent 0 52%, rgba(68, 175, 203, 0.35) 52.2% 52.5%, transparent 52.7%),
+		radial-gradient(circle at 50% 50%, transparent 0 70%, rgba(246, 133, 53, 0.25) 70.2% 70.4%, transparent 70.6%),
+		radial-gradient(circle at 78% 22%, var(--us24-orange) 0 1.1%, transparent 1.4%),
+		radial-gradient(circle at 16% 64%, #339CB9 0 .8%, transparent 1.1%),
+		radial-gradient(circle at 60% 98%, #67BDD1 0 .9%, transparent 1.2%);
 	opacity: .85;
 	pointer-events: none;
 }
@@ -272,7 +275,7 @@ p { text-wrap: pretty; }
 /* ------------------------------------------------------------------ sections */
 .us24-section { padding-block: clamp(56px, 7vw, 104px); position: relative; }
 .us24-section.is-alt {
-	background: linear-gradient(180deg, rgba(228, 239, 255, 0) 0%, rgba(228, 239, 255, 0.65) 14%, rgba(228, 239, 255, 0.65) 86%, rgba(228, 239, 255, 0) 100%);
+	background: linear-gradient(180deg, rgba(221, 242, 247, 0) 0%, rgba(221, 242, 247, 0.65) 14%, rgba(221, 242, 247, 0.65) 86%, rgba(221, 242, 247, 0) 100%);
 }
 .us24-section.is-tight { padding-block: clamp(40px, 5vw, 72px); }
 .us24-section.is-continuation { padding-bottom: 0; }
@@ -291,9 +294,9 @@ p { text-wrap: pretty; }
 .us24-prose h2 { font-size: var(--wp--preset--font-size--xx-large); }
 .us24-prose h3 { font-size: clamp(1.25rem, 1.8vw, 1.5rem); }
 .us24-prose h4 { font-size: 1.125rem; }
-.us24-prose p, .us24-prose li { color: #1E293B; }
+.us24-prose p, .us24-prose li { color: #082B3E; }
 .us24-prose strong { color: var(--wp--preset--color--fg); }
-.us24-prose a { color: var(--wp--preset--color--blue); }
+.us24-prose a { color: #2897B4; }
 .us24-prose a:hover { color: var(--us24-orange); }
 .us24-prose ul:not([class*="is-style-us24"]), .us24-prose ol { padding-left: 1.3em; }
 .us24-prose li + li { margin-top: .45em; }
@@ -327,9 +330,9 @@ p { text-wrap: pretty; }
 }
 .us24-table table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: .9375rem; }
 .us24-table th, .us24-table td { padding: 12px 16px; text-align: left; border: 0; border-bottom: 1px solid var(--us24-line-soft); }
-.us24-table thead th { font-family: var(--wp--preset--font-family--mono); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--us24-label); background: rgba(228, 239, 255, 0.7); }
+.us24-table thead th { font-family: var(--wp--preset--font-family--mono); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--us24-label); background: rgba(221, 242, 247, 0.7); }
 .us24-table tbody tr:last-child td { border-bottom: 0; }
-.us24-table tbody tr:hover td { background: rgba(219, 234, 254, 0.35); }
+.us24-table tbody tr:hover td { background: rgba(194, 237, 247, 0.35); }
 .us24-table td:nth-child(2) { font-weight: 700; color: var(--wp--preset--color--fg); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .is-style-us24-card,
 .is-style-us24-panel {
@@ -350,8 +353,8 @@ p { text-wrap: pretty; }
 	width: 32px;
 	height: 3px;
 	border-radius: 3px;
-	background: linear-gradient(90deg, #F68535 0%, #FFA866 50%, #2563EB 100%);
-	box-shadow: 0 0 10px rgba(246, 133, 53, 0.5);
+	background: linear-gradient(90deg, #F68535 0%, #FFA866 35%, #339CB9 75%, #67BDD1 100%);
+	box-shadow: 0 0 10px rgba(246, 133, 53, 0.45), 0 0 14px rgba(51, 156, 185, 0.35);
 	margin-bottom: 8px;
 	flex: 0 0 auto;
 }
@@ -368,7 +371,7 @@ p { text-wrap: pretty; }
 .is-style-us24-card.has-link .wp-block-post-title a::before { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .is-style-us24-card.has-link:hover,
 .is-style-us24-card:hover {
-	border-color: rgba(37, 99, 235, 0.45);
+	border-color: rgba(51, 156, 185, 0.55);
 	background: var(--us24-glass-hover);
 	transform: translateY(-4px);
 	box-shadow: var(--us24-glass-shadow-hover);
@@ -410,12 +413,12 @@ p { text-wrap: pretty; }
 .is-style-us24-pills li {
 	margin: 0 !important;
 	padding: 7px 16px;
-	border: 1px solid rgba(147, 197, 253, 0.6);
+	border: 1px solid rgba(68, 175, 203, 0.55);
 	border-radius: 999px;
 	background: var(--us24-glass-pill);
 	-webkit-backdrop-filter: blur(12px);
 	backdrop-filter: blur(12px);
-	box-shadow: 0 2px 8px rgba(15, 35, 75, 0.05), inset 0 1px 1px #FFFFFF;
+	box-shadow: 0 2px 8px rgba(8, 43, 62, 0.05), inset 0 1px 1px #FFFFFF;
 	font-size: .875rem;
 	font-weight: 600;
 	line-height: 1.3;
@@ -451,7 +454,7 @@ p { text-wrap: pretty; }
 .us24-split > .wp-block-column > * + * { margin-top: 1.05em; }
 .is-style-us24-frame img { border-radius: var(--us24-radius); border: 1px solid var(--us24-line); }
 .is-style-us24-light img { border-radius: var(--us24-radius); background: #fff; padding: clamp(10px, 2vw, 22px); }
-.is-style-us24-avatar img { width: 112px; height: 112px; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 50%; border: 2px solid var(--us24-line); background: #E4EFFF; }
+.is-style-us24-avatar img { width: 112px; height: 112px; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 50%; border: 2px solid var(--us24-line); background: #DDF2F7; }
 .wp-block-image figcaption { text-align: left; }
 .us24-gallery { gap: 16px; }
 .us24-gallery .wp-block-image { margin: 0; }
@@ -468,7 +471,7 @@ p { text-wrap: pretty; }
 .is-style-us24-quote {
 	position: relative;
 	margin: 0;
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 243, 255, 0.85) 100%);
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(230, 247, 251, 0.88) 100%);
 	border: 1px solid var(--us24-line) !important;
 	border-radius: 28px;
 	padding: clamp(28px, 4vw, 56px) clamp(24px, 4vw, 56px) clamp(28px, 4vw, 48px);
@@ -495,13 +498,13 @@ p { text-wrap: pretty; }
 	border-radius: 28px;
 	padding: clamp(28px, 5vw, 64px);
 	background:
-		radial-gradient(100% 160% at 100% 0%, rgba(246, 133, 53, .16) 0%, transparent 60%),
-		radial-gradient(80% 120% at 0% 100%, rgba(37, 99, 235, .14) 0%, transparent 55%),
-		linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 243, 255, 0.85) 100%);
+		radial-gradient(100% 160% at 100% 0%, rgba(246, 133, 53, .18) 0%, transparent 60%),
+		radial-gradient(80% 120% at 0% 100%, rgba(68, 175, 203, .22) 0%, transparent 55%),
+		linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(228, 245, 249, 0.9) 100%);
 	border: 1px solid var(--us24-line);
 	-webkit-backdrop-filter: blur(20px) saturate(170%);
 	backdrop-filter: blur(20px) saturate(170%);
-	box-shadow: 0 20px 50px -15px rgba(15, 35, 75, 0.1), inset 0 1px 2px #FFFFFF, 0 0 35px -8px rgba(37, 99, 235, 0.1);
+	box-shadow: 0 20px 50px -15px rgba(8, 43, 62, 0.1), inset 0 1px 2px #FFFFFF, 0 0 35px -8px rgba(51, 156, 185, 0.18);
 	gap: 28px;
 }
 .us24-cta > * { margin-block: 0 !important; }
@@ -528,10 +531,10 @@ p { text-wrap: pretty; }
 	color: #FFFFFF !important;
 }
 .wp-block-button.is-style-outline > .wp-block-button__link {
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(219, 234, 254, 0.6) 100%);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(206, 239, 247, 0.6) 100%);
 	color: var(--wp--preset--color--fg) !important;
 	border: 1px solid var(--us24-line);
-	box-shadow: 0 4px 14px -3px rgba(15, 35, 75, 0.08), inset 0 1px 1px #FFFFFF;
+	box-shadow: 0 4px 14px -3px rgba(8, 43, 62, 0.08), inset 0 1px 1px #FFFFFF;
 	-webkit-backdrop-filter: blur(14px) saturate(160%);
 	backdrop-filter: blur(14px) saturate(160%);
 }
@@ -557,17 +560,17 @@ p { text-wrap: pretty; }
 	font: inherit;
 	font-size: 1rem;
 	color: var(--wp--preset--color--fg);
-	background: rgba(255, 255, 255, 0.92);
-	border: 1px solid rgba(147, 197, 253, 0.6);
+	background: rgba(255, 255, 255, 0.94);
+	border: 1px solid rgba(68, 175, 203, 0.55);
 	border-radius: 12px;
 	padding: 12px 14px;
 	-webkit-backdrop-filter: blur(12px);
 	backdrop-filter: blur(12px);
-	box-shadow: inset 0 1px 3px rgba(15, 35, 75, 0.05), 0 1px 0 #FFFFFF;
+	box-shadow: inset 0 1px 3px rgba(8, 43, 62, 0.05), 0 1px 0 #FFFFFF;
 	transition: border-color .2s, background .2s, box-shadow .2s;
 }
 .us24-form input[type="file"] { font-size: .875rem; color: var(--wp--preset--color--muted); }
-.us24-form input[type="file"]::file-selector-button { margin-right: 12px; padding: 9px 14px; border: 1px solid rgba(147, 197, 253, 0.6); border-radius: 10px; background: linear-gradient(180deg, #FFFFFF, #E4EFFF); color: var(--wp--preset--color--fg); font: inherit; font-weight: 600; cursor: pointer; box-shadow: inset 0 1px 0 #FFFFFF; }
+.us24-form input[type="file"]::file-selector-button { margin-right: 12px; padding: 9px 14px; border: 1px solid rgba(68, 175, 203, 0.55); border-radius: 10px; background: linear-gradient(180deg, #FFFFFF, #DDF2F7); color: var(--wp--preset--color--fg); font: inherit; font-weight: 600; cursor: pointer; box-shadow: inset 0 1px 0 #FFFFFF; }
 .us24-form input[type="file"]::file-selector-button:hover { border-color: var(--us24-orange); }
 .us24-form input:focus, .us24-form textarea:focus, .us24-form select:focus, .us24-search input:focus {
 	outline: none;
@@ -595,7 +598,7 @@ p { text-wrap: pretty; }
 .us24-form .us24-form__note { font-size: .8125rem; color: var(--wp--preset--color--muted); margin: 0; }
 /* :root raises specificity over the plugin's light base styles, whatever the load order. */
 :root .us24-form__notice { border-radius: 12px; padding: 12px 14px; font-weight: 600; margin: 0 0 6px; }
-:root .us24-form__notice.is-success { background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.4); color: #1D4ED8; }
+:root .us24-form__notice.is-success { background: rgba(51, 156, 185, 0.12); border: 1px solid rgba(51, 156, 185, 0.5); color: #1781A2; }
 :root .us24-form__notice.is-error { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.4); color: #B91C1C; }
 .us24-offices { display: grid; gap: 12px; }
 .us24-offices.is-cards .us24-office {
@@ -616,7 +619,7 @@ p { text-wrap: pretty; }
 .us24-search .wp-block-search__button { margin: 0; border-radius: 12px; }
 
 /* ------------------------------------------------------------------ footer */
-.us24-site-footer { border-top: 1px solid var(--us24-line); background: linear-gradient(180deg, var(--wp--preset--color--bg) 0%, #DCEBFF 100%); }
+.us24-site-footer { border-top: 1px solid var(--us24-line); background: linear-gradient(180deg, var(--wp--preset--color--bg) 0%, #D5EFF6 100%); }
 .us24-footer { padding-inline: max(20px, env(safe-area-inset-left, 0px)); padding-bottom: 28px; }
 .us24-footer__cta {
 	margin-block: clamp(48px, 6vw, 88px) clamp(40px, 5vw, 64px) !important;
@@ -625,12 +628,12 @@ p { text-wrap: pretty; }
 	gap: 24px;
 	background:
 		radial-gradient(90% 160% at 100% 0%, rgba(246, 133, 53, .18) 0%, transparent 60%),
-		radial-gradient(70% 120% at 0% 100%, rgba(37, 99, 235, .15) 0%, transparent 55%),
-		linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(235, 243, 255, 0.85) 100%);
+		radial-gradient(70% 120% at 0% 100%, rgba(68, 175, 203, .22) 0%, transparent 55%),
+		linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(228, 245, 249, 0.9) 100%);
 	border: 1px solid var(--us24-line);
 	-webkit-backdrop-filter: blur(20px) saturate(170%);
 	backdrop-filter: blur(20px) saturate(170%);
-	box-shadow: 0 24px 60px -15px rgba(15, 35, 75, 0.12), inset 0 1px 2px #FFFFFF, 0 0 35px -8px rgba(37, 99, 235, 0.1);
+	box-shadow: 0 24px 60px -15px rgba(8, 43, 62, 0.12), inset 0 1px 2px #FFFFFF, 0 0 35px -8px rgba(51, 156, 185, 0.18);
 }
 .us24-footer__cta-text { flex: 1 1 480px; }
 .us24-footer__cta-text > * { margin-block: 0; }
