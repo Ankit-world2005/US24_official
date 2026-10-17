@@ -2,13 +2,15 @@
    one glass info card and a tour bar along the bottom. Everything is scoped to .us24-hero. */
 .us24-hero {
 	--h-bg: #070E26;
-	--h-glass: rgba(12, 22, 52, .72);
-	--h-line: rgba(140, 165, 235, .22);
-	--h-fg: #F2F6FB;
+	--h-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(13, 25, 58, 0.75) 100%);
+	--h-line: rgba(140, 175, 255, 0.25);
+	--h-line-white: rgba(255, 255, 255, 0.35);
+	--h-fg: #FFFFFF;
 	--h-muted: #A9B6D8;
 	--h-accent: #F68535;
-	--h-blue: #7C9CFF;
-	--h-accent-ink: #0A1230;
+	--h-blue: #60A5FA;
+	--h-ice-blue: #BAE6FD;
+	--h-accent-ink: #FFFFFF;
 	position: relative;
 	height: calc(100svh - var(--wp--custom--header-height, 72px) - var(--wp-admin--admin-bar--height, 0px));
 	min-height: 560px;
@@ -42,34 +44,113 @@
 }
 .us24-hero__copy > * { pointer-events: auto; margin: 0; }
 .us24-hero__badges { display: flex; flex-wrap: wrap; gap: 8px; }
-.us24-hero__badge { font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--h-line); background: rgba(12, 22, 52,.55); color: var(--h-fg); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
-.us24-hero__badge b { color: var(--h-accent); font-weight: 700; }
+.us24-hero__badge {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .02em;
+	padding: 6px 13px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(96, 165, 250, 0.15) 100%);
+	color: #FFFFFF;
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+.us24-hero__badge b { color: #FFA866; font-weight: 700; }
 .us24-hero .us24-hero__copy h1 {
 	margin: 0; color: var(--h-fg);
 	font-family: var(--wp--preset--font-family--display, 'Bricolage Grotesque', system-ui, sans-serif);
 	font-weight: 800; font-size: clamp(40px, 5.6vw, 82px); line-height: .96; letter-spacing: -.045em; text-wrap: balance;
 }
-.us24-hero .us24-hero__copy h1 em { font-style: normal; color: var(--h-accent); }
+.us24-hero .us24-hero__copy h1 em { font-style: normal; color: var(--h-accent); text-shadow: 0 0 25px rgba(246, 133, 53, 0.45); }
 .us24-hero .us24-hero__copy p { margin: 0; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.6; color: var(--h-muted); max-width: 48ch; }
 .us24-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .us24-hero .us24-hero__btn { display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 22px; border-radius: 14px; font-weight: 700; font-size: 16px; text-decoration: none; transition: transform .25s, box-shadow .25s, background .25s, border-color .25s; }
-.us24-hero .us24-hero__btn.is-primary { background: var(--h-accent); color: var(--h-accent-ink); box-shadow: 0 10px 30px -10px rgba(246, 133, 53,.7); }
-.us24-hero .us24-hero__btn.is-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -12px rgba(246, 133, 53,.85); color: var(--h-accent-ink); }
-.us24-hero .us24-hero__btn.is-ghost { color: var(--h-fg); border: 1px solid var(--h-line); background: rgba(12, 22, 52,.5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
-.us24-hero .us24-hero__btn.is-ghost:hover { border-color: var(--h-accent); color: var(--h-fg); }
+.us24-hero .us24-hero__btn.is-primary {
+	background: linear-gradient(180deg, #FFA05C 0%, #F68535 50%, #E26E1E 100%);
+	color: #FFFFFF;
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	box-shadow: 0 12px 28px -6px rgba(246, 133, 53, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+.us24-hero .us24-hero__btn.is-primary:hover {
+	transform: translateY(-2px);
+	background: linear-gradient(180deg, #FFB075 0%, #FF8F42 50%, #F07520 100%);
+	box-shadow: 0 16px 36px -6px rgba(246, 133, 53, 0.85), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+	color: #FFFFFF;
+}
+.us24-hero .us24-hero__btn.is-ghost {
+	color: #FFFFFF;
+	border: 1px solid rgba(147, 197, 253, 0.45);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(96, 165, 250, 0.15) 100%);
+	-webkit-backdrop-filter: blur(14px) saturate(160%);
+	backdrop-filter: blur(14px) saturate(160%);
+	box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.55);
+}
+.us24-hero .us24-hero__btn.is-ghost:hover {
+	border-color: rgba(255, 255, 255, 0.7);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(96, 165, 250, 0.28) 100%);
+	box-shadow: 0 14px 32px -6px rgba(96, 165, 250, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+	color: #FFFFFF;
+}
 .us24-hero__stat { display: flex; gap: 28px; flex-wrap: wrap; padding-top: 6px; }
 .us24-hero__stat div { display: flex; flex-direction: column; }
 .us24-hero__stat dt { font-family: var(--wp--preset--font-family--display, 'Bricolage Grotesque', sans-serif); font-size: 30px; font-weight: 800; letter-spacing: -.03em; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .us24-hero__stat dd { margin: 0; font-size: 12px; color: var(--h-muted); }
 
 .us24-hero__labels { position: absolute; inset: 0; pointer-events: none; z-index: 2; overflow: hidden; }
-.us24-hot { position: absolute; left: 0; top: 0; pointer-events: auto; display: flex; align-items: center; gap: 8px; padding: 5px 11px 5px 6px; border-radius: 999px; border: 1px solid var(--h-line); background: rgba(12, 22, 52,.7); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: var(--h-fg); font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; cursor: pointer; transition: border-color .25s, background .25s, opacity .3s; }
-.us24-hot:hover, .us24-hot.on { border-color: var(--c, var(--h-accent)); background: rgba(18, 32, 74,.92); }
+.us24-hot {
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: auto;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px 6px 7px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(13, 25, 58, 0.8) 100%);
+	-webkit-backdrop-filter: blur(14px);
+	backdrop-filter: blur(14px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+	color: #FFFFFF;
+	font: inherit;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: .02em;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: border-color .25s, background .25s, transform .25s var(--us24-ease), box-shadow .25s;
+}
+.us24-hot:hover, .us24-hot.on {
+	border-color: #FFA866;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(20, 38, 86, 0.94) 100%);
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(246, 133, 53, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+	transform: translateY(-2px);
+}
 .us24-hot .dot { position: relative; width: 14px; height: 14px; border-radius: 50%; background: var(--c, var(--h-accent)); }
 .us24-hot .dot::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid var(--c, var(--h-accent)); opacity: 0; animation: us24-ping 2.2s ease-out infinite; }
 @keyframes us24-ping { 0% { transform: scale(.5); opacity: .9; } 100% { transform: scale(1.6); opacity: 0; } }
 
-.us24-hero__card { position: absolute; z-index: 3; right: max(24px, env(safe-area-inset-right, 0px)); bottom: 92px; width: min(340px, calc(100% - 48px)); background: var(--h-glass); border: 1px solid var(--h-line); border-radius: 20px; padding: 18px 20px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); display: flex; flex-direction: column; gap: 10px; transition: opacity .35s, transform .35s; }
+.us24-hero__card {
+	position: absolute;
+	z-index: 3;
+	right: max(24px, env(safe-area-inset-right, 0px));
+	bottom: 92px;
+	width: min(340px, calc(100% - 48px));
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(13, 25, 58, 0.8) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 22px;
+	padding: 20px 22px;
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	backdrop-filter: blur(20px) saturate(180%);
+	box-shadow: 0 28px 60px -10px rgba(0, 0, 0, 0.75), 0 0 30px -5px rgba(96, 165, 250, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	transition: opacity .35s, transform .35s;
+}
 .us24-hero__card:empty { display: none; }
 .us24-hero__card.swap { opacity: 0; transform: translateY(8px); }
 .us24-hero__card .eyebrow { font-family: var(--wp--preset--font-family--mono, 'JetBrains Mono', monospace); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--c, var(--h-accent)); }
@@ -85,11 +166,23 @@
 .us24-hero__legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--h-muted); }
 .us24-hero__legend span { display: inline-flex; align-items: center; gap: 7px; }
 .us24-hero__legend i { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 10px currentColor; background: currentColor; }
-.us24-hero__tour { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 5px; border-radius: 999px; border: 1px solid var(--h-line); background: var(--h-glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.us24-hero__tour {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	padding: 5px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(13, 25, 58, 0.8) 100%);
+	-webkit-backdrop-filter: blur(16px);
+	backdrop-filter: blur(16px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
 .us24-hero__tour:empty { display: none; }
 .us24-hero__tour button { position: relative; overflow: hidden; font: inherit; font-size: 12px; font-weight: 700; color: var(--h-muted); background: transparent; border: 0; border-radius: 999px; padding: 8px 12px; min-height: 36px; cursor: pointer; transition: color .2s, background .2s; }
 .us24-hero__tour button:hover { color: var(--h-fg); }
-.us24-hero__tour button[aria-pressed="true"] { color: var(--h-fg); background: rgba(246, 133, 53,.16); }
+.us24-hero__tour button[aria-pressed="true"] { color: #FFFFFF; background: rgba(246, 133, 53, .22); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); }
 .us24-hero__tour button .bar { position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; border-radius: 2px; background: var(--h-accent); transform-origin: left; transform: scaleX(0); }
 .us24-hero__tour .icon { width: 36px; padding: 0; display: grid; place-items: center; color: var(--h-fg); }
 .us24-hero button:focus-visible, .us24-hero a:focus-visible { outline: 2px solid var(--h-accent); outline-offset: 2px; }
