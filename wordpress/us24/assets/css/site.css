@@ -9,11 +9,11 @@
 	--us24-glass-strong: rgba(255, 255, 255, 0.98);
 	--us24-glass-pill: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(206, 239, 247, 0.82) 100%);
 
-	/* Glossy Borders & Highlights */
-	--us24-line: rgba(51, 156, 185, 0.42);
-	--us24-line-soft: rgba(51, 156, 185, 0.22);
-	--us24-line-white: rgba(255, 255, 255, 0.92);
-	--us24-line-cyan: rgba(68, 175, 203, 0.6);
+	/* Glossy Borders & Highlights (seamlessly merged) */
+	--us24-line: rgba(51, 156, 185, 0.28);
+	--us24-line-soft: rgba(51, 156, 185, 0.15);
+	--us24-line-white: rgba(255, 255, 255, 0.95);
+	--us24-line-cyan: rgba(68, 175, 203, 0.45);
 
 	/* Theme Palette: Silk Cyan-Teal Gradient, US24 Orange & Deep Oceanic Navy */
 	--us24-c: var(--wp--preset--color--accent, #F68535);
@@ -71,8 +71,8 @@ img { height: auto; }
 	position: sticky;
 	top: var(--wp-admin--admin-bar--height, 0px);
 	z-index: 100;
-	border-bottom: 1px solid rgba(51, 156, 185, 0.35);
-	box-shadow: 0 4px 24px -4px rgba(8, 43, 62, 0.07);
+	border-bottom: 1px solid rgba(51, 156, 185, 0.22);
+	box-shadow: 0 4px 24px -4px rgba(8, 43, 62, 0.06);
 }
 /* The blur lives on a pseudo-element: backdrop-filter on the header itself would become the containing
    block of the full-screen mobile menu (position: fixed) and clip it to the header's 72px. */

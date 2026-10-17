@@ -504,12 +504,12 @@
     // ---------- hologram globe ----------
     const globe = new THREE.Group(); globe.position.set(HQ.x, roofY + 9.5, HQ.z); scene.add(globe);
     const R = 2.4;
-    const gcore = new THREE.Mesh(new THREE.SphereGeometry(R*0.985, 48, 32), new THREE.MeshStandardMaterial({color:0x0A1640, roughness:0.15, metalness:0.6, transparent:true, opacity:0.55, envMapIntensity:1.5}));
+    const gcore = new THREE.Mesh(new THREE.SphereGeometry(R*0.985, 48, 32), new THREE.MeshStandardMaterial({color:0x082B3E, roughness:0.15, metalness:0.6, transparent:true, opacity:0.55, envMapIntensity:1.5}));
     globe.add(gcore); gcore.userData.key = 'offices'; pickables.push(gcore);
-    globe.add(new THREE.Mesh(new THREE.SphereGeometry(R, 36, 18), new THREE.MeshBasicMaterial({color:0x7C9CFF, wireframe:true, transparent:true, opacity:0.22, depthWrite:false})));
+    globe.add(new THREE.Mesh(new THREE.SphereGeometry(R, 36, 18), new THREE.MeshBasicMaterial({color:0x44AFCB, wireframe:true, transparent:true, opacity:0.38, depthWrite:false})));
     function ll(lat, lon, r){ const phi=(90-lat)*Math.PI/180, th=(lon+180)*Math.PI/180; return new THREE.Vector3(-r*Math.sin(phi)*Math.cos(th), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(th)); }
     const offices = [{name:'Chicago', lat:41.88, lon:-87.63},{name:'Uxbridge', lat:51.55, lon:-0.48},{name:'Noida', lat:28.54, lon:77.39}];
-    const pinMat = new THREE.MeshStandardMaterial({color:0x3A1A05, emissive:0xF68535, emissiveIntensity:2.2});
+    const pinMat = new THREE.MeshStandardMaterial({color:0x3A1A05, emissive:0xF68535, emissiveIntensity:2.4});
     const officeAnchors = [];
     offices.forEach(o=>{
       const p = ll(o.lat, o.lon, R);
@@ -519,12 +519,12 @@
     for (let i=0;i<3;i++){
       const a = ll(offices[i].lat, offices[i].lon, R), b = ll(offices[(i+1)%3].lat, offices[(i+1)%3].lon, R);
       const mid = a.clone().add(b).multiplyScalar(0.5).normalize().multiplyScalar(R*1.45);
-      globe.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.QuadraticBezierCurve3(a, mid, b), 48, 0.025, 6, false), new THREE.MeshBasicMaterial({color:0xFFB27A, transparent:true, opacity:0.85})));
+      globe.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.QuadraticBezierCurve3(a, mid, b), 48, 0.025, 6, false), new THREE.MeshBasicMaterial({color:0xF68535, transparent:true, opacity:0.85})));
     }
     const beamH = 9.5 - R - 0.5;
-    const beam = new THREE.Mesh(new THREE.CylinderGeometry(R*0.5, 0.8, beamH, 32, 1, true), new THREE.MeshBasicMaterial({color:0x5B82FF, transparent:true, opacity:0.08, side:THREE.DoubleSide, depthWrite:false, blending:THREE.AdditiveBlending}));
+    const beam = new THREE.Mesh(new THREE.CylinderGeometry(R*0.5, 0.8, beamH, 32, 1, true), new THREE.MeshBasicMaterial({color:0x339CB9, transparent:true, opacity:0.14, side:THREE.DoubleSide, depthWrite:false, blending:THREE.AdditiveBlending}));
     beam.position.set(HQ.x, roofY + 0.5 + beamH/2, HQ.z); scene.add(beam);
-    const projector = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 1.0, 0.35, 32), new THREE.MeshStandardMaterial({color:0x2A3038, emissive:0x5B82FF, emissiveIntensity:0.5, metalness:0.8, roughness:0.25}));
+    const projector = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 1.0, 0.35, 32), new THREE.MeshStandardMaterial({color:0x1A2530, emissive:0x339CB9, emissiveIntensity:0.75, metalness:0.8, roughness:0.25}));
     projector.position.set(HQ.x, roofY+0.6, HQ.z); projector.castShadow = true; scene.add(projector);
 
     // ---------- data flows (subtle light streaks) ----------
@@ -539,9 +539,9 @@
         flows.push({parts, c, t:i/count, speed});
       }
     }
-    addFlow(curve([[-18,8,-3],[-12,11.5,0],[-6,9.5,frontZ+2.4],[0,7.4,frontZ+3],[6,10.5,frontZ+2.2],[12,16,-2],[17,18.5,-6]]), 0x8FAEFF, 14, 0.045, 0.75);
-    addFlow(curve([[19,9,-11],[12,6.5,-14],[5,5.2,-12],[0,4.8,HQ.z-HQ.d/2-2.4],[-6,5.4,-12],[-12,6.2,-14],[-18,6,-11]]), 0xFF9A4D, 12, 0.04, 0.8);
-    addFlow(curve([[15,12,-6],[11,16,-2],[5,12.5,frontZ+1.6],[0, base+lobbyH+2*floorH+1.1, frontZ+0.7]]), 0xFFD36B, 3, 0.06, 0.7);
+    addFlow(curve([[-18,8,-3],[-12,11.5,0],[-6,9.5,frontZ+2.4],[0,7.4,frontZ+3],[6,10.5,frontZ+2.2],[12,16,-2],[17,18.5,-6]]), 0x44AFCB, 14, 0.045, 0.75);
+    addFlow(curve([[19,9,-11],[12,6.5,-14],[5,5.2,-12],[0,4.8,HQ.z-HQ.d/2-2.4],[-6,5.4,-12],[-12,6.2,-14],[-18,6,-11]]), 0xF68535, 12, 0.04, 0.8);
+    addFlow(curve([[15,12,-6],[11,16,-2],[5,12.5,frontZ+1.6],[0, base+lobbyH+2*floorH+1.1, frontZ+0.7]]), 0x67BDD1, 3, 0.06, 0.7);
 
     // ---------- post-processing: bloom, tilt-shift lens, film grain & vignette ----------
     let composer = null, bloom = null, hTilt = null, vTilt = null, grain = null;
