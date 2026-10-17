@@ -26,7 +26,6 @@ This repository implements a three-tier environment branching model:
 ```
 ├── .gitignore
 ├── README.md
-├── US24 3D Hero.html          # Interactive 3D Three.js revenue-cycle hero visualization
 └── wordpress/
     ├── us24/                  # Full-site editing block theme (templates, design tokens, 3D hero block)
     ├── us24-site/             # Core site plugin (page content import, contact forms, office info, SEO)
