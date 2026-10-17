@@ -9,7 +9,7 @@ applied to every page of the live site, as two WordPress packages:
 | `dist/us24-site.zip` (`us24-site/`) | Site plugin: imports all 67 pages + 1 post as editable blocks, contact & career forms, office details in one place, SEO descriptions | Plugins → Add New → Upload |
 
 Content source: a crawl of https://us24solutions.com on 2026-10-15 (`tools/data/content.json`).
-`SITE-AUDIT.md` lists what was found on the live site and what changed on the way over.
+[`SITE-AUDIT.md`](SITE-AUDIT.md) lists what was found on the live site and what changed on the way over.
 
 ## Install
 
